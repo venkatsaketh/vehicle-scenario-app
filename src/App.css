@@ -13,7 +13,7 @@ html,body{
 .App .sidebar{
     flex:1;
     background-color: #AABBCC;
-    padding: 40px 0px 0px 20px;
+    padding: 40px 0px 0px 0px;
 }
 .App .content{
     flex: 6;
@@ -24,5 +24,20 @@ html,body{
 .App .sidebar .nav {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 12px;
+}
+
+
+.App .sidebar .nav button{
+    text-decoration: none;
+    text-align:left;
+    border: none;
+    background-color: #AABBCC;
+    color:black;
+    padding: 7px 0px 7px 20px;
+}
+
+.App .sidebar .nav button:hover, .App .sidebar .nav button:focus{
+    background-color: white;
+    color : rgb(59, 144, 247);   
 }

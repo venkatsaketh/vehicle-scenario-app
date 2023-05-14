@@ -9,7 +9,7 @@ function AddVehicle() {
     const formRef = useRef();
     const directions = [
         { value: 'Towards', label: 'Towards' },
-  { value: 'Backwads', label: 'Backwards' },
+  { value: 'Backwards', label: 'Backwards' },
   { value: 'Upwards', label: 'Upwards' },
   { value: 'Downwards', label: 'Downwards' }
     ]

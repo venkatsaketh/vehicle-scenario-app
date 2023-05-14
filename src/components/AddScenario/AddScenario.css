@@ -1,0 +1,51 @@
+.addscenario {
+    margin : 50px 50px 0px 50px;
+}
+
+.form {
+    background-color: rgb(46, 45, 45);
+    border-radius: 10px;
+}
+
+.btnGrp {
+    margin-top : 40px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+
+.btnGrp button {
+    border-radius: 3px;
+    border:none;
+    width:80px;
+    padding :10px;
+}
+
+form {
+    padding: 60px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form input {
+    padding: 15px;
+    border-radius: 3px;
+    background-color: rgb(36, 36, 36);
+    border-color: rgb(145, 142, 142);
+    border-style: solid;
+    color:rgb(145, 142, 142);
+    width:170px;
+    outline: none;
+}
+
+.inpt{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.err{
+    color: rgb(249, 61, 61);
+    font-size: 12px;
+}

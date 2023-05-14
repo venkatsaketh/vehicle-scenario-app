@@ -1,0 +1,40 @@
+{
+  "scenarios": [
+    {
+      "scenarioName": "sdfe",
+      "time": 3,
+      "id": 1
+    },
+    {
+      "scenarioName": "test",
+      "time": 8,
+      "id": 2
+    },
+    {
+      "scenarioName": "my test",
+      "time": 77,
+      "id": 3
+    },
+    {
+      "scenarioName": "sd",
+      "time": 7,
+      "id": 4
+    },
+    {
+      "scenarioName": "asdasd",
+      "time": 14,
+      "id": 5
+    }
+  ],
+  "vehicles": [
+    {
+      "scenariosList": "my test",
+      "VehicleName": "tata",
+      "speed": 55,
+      "positionX": 33,
+      "positionY": 33,
+      "direction": "Backwads",
+      "id": 1
+    }
+  ]
+}

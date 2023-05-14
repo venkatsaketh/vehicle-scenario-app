@@ -1,0 +1,27 @@
+.form-1 {
+    display: block !important;
+}
+form .row-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.css-13cymwt-control,.css-t3ipsp-control,.css-1nmdiq5-menu{
+    background-color: rgb(36, 36, 36) !important;
+    border-color: rgb(145, 150, 150) !important;
+    border-width: 2px !important;
+    width:200px;
+    height: 47px;
+}
+.css-1dimb5e-singleValue {
+    color:rgb(145, 142, 142) !important;
+}
+
+.css-1nmdiq5-menu{
+    color:rgb(69, 69, 71);
+    background-color: aliceblue;
+}

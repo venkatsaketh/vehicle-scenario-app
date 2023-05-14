@@ -9,7 +9,7 @@ function SideBar() {
   return (
     <div className="sidebar">
       <div className="nav">
-        <button onClick={() => navigatePage("Home")}>Home</button>
+        <button onClick={() => navigatePage("/")}>Home</button>
         <button onClick={() => navigatePage("AddScenario")}>Add Scenario</button>
         <button onClick={() => navigatePage("View")}>All Scenarios</button>
         <button onClick={() => navigatePage("AddVehicle")}>Add Vehicle</button>

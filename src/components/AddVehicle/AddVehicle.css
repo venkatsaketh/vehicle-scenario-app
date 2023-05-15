@@ -25,3 +25,7 @@ form .row-1 {
     color:rgb(69, 69, 71);
     background-color: aliceblue;
 }
+
+.css-1u9des2-indicatorSeparator {
+    display: none;
+}

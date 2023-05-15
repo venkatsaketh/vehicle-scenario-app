@@ -1,40 +1,48 @@
 {
   "scenarios": [
     {
-      "scenarioName": "sdfe",
-      "time": 3,
+      "scenarioName": "First",
+      "time": 77,
       "id": 1
     },
     {
-      "scenarioName": "test",
-      "time": 8,
+      "scenarioName": "My Test",
+      "time": 77,
       "id": 2
     },
     {
-      "scenarioName": "my test",
+      "scenarioName": "Test Scenario",
       "time": 77,
       "id": 3
-    },
-    {
-      "scenarioName": "sd",
-      "time": 7,
-      "id": 4
-    },
-    {
-      "scenarioName": "asdasd",
-      "time": 14,
-      "id": 5
     }
   ],
   "vehicles": [
     {
-      "scenariosList": "my test",
+      "scenariosList": "Test Scenario",
       "VehicleName": "tata",
       "speed": 55,
       "positionX": 33,
       "positionY": 33,
       "direction": "Backwads",
       "id": 1
+    },
+    {
+      "scenariosList": "My Test",
+      "VehicleName": "ford",
+      "speed": 33,
+      "positionX": 33,
+      "positionY": 33,
+      "direction": "Backwads",
+      "id": 2
+    },
+    {
+      "scenariosList": "My Test",
+      "VehicleName": "sfs",
+      "speed": 55,
+      "positionX": 4,
+      "positionY": 4,
+      "direction": "Towards",
+      "id": 3
     }
   ]
 }

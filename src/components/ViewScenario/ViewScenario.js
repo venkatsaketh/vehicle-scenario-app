@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ViewScenario.css';
 import Icon from "react-crud-icons";
+import EditScenario from './EditScenario';
 import { useNavigate } from "react-router-dom";
+import Modal from 'react-modal';
 
 
 import "./../../../node_modules/react-crud-icons/dist/css/react-crud-icons.css";
@@ -13,7 +15,17 @@ function ViewScenario() {
     const navigate = useNavigate();
     const [scens,setScens] = useState([]);
     const [vehs,setVehs] = useState([]);
-
+    const [modalIsOpen, setIsOpen] = useState(false);
+    
+    function openModal(id) {
+        sessionStorage.setItem("Id", id);
+        setIsOpen(true);
+      }
+    
+      function closeModal() {
+        setIsOpen(false);
+        getScenarios();
+      }
 
     const getScenarios = () => {
         axios.get(scenarioURL)
@@ -56,7 +68,7 @@ function ViewScenario() {
         <h2>All Scenarios</h2>
 
         <table>
-          <tr className='Thead'>
+          <tr className="Thead">
             <td>Scenario Id</td>
             <td>Scenario Name</td>
             <td>Scenario Time</td>
@@ -65,28 +77,53 @@ function ViewScenario() {
             <td>Edit</td>
             <td>Delete</td>
           </tr>
-         {scens.length > 0 &&
-          scens.map(x=> {
-            return (
-              <tr className="table-data" id={x.id}>
-                <td>{x.id}</td>
-                <td>{x.scenarioName}</td>
-                <td>{x.time}</td>
-                <td>{countVehicles(x.scenarioName)}</td>
-                <td>
-                  <Icon name="add" theme="light" size="medium" onClick = { () =>navigate('/AddVehicle')}/>
-                </td>
-                <td>
-                  <Icon name="edit" theme="light" size="medium" />
-                </td>
-                <td>
-                  <Icon name="delete" theme="light" size="medium" onClick= { () => deleteVehicle(x.id)}/>
-                </td>
-              </tr>
-            );
-          })
-         }
+          {scens.length > 0 &&
+            scens.map((x) => {
+              return (
+                <tr className="table-data" id={x.id}>
+                  <td>{x.id}</td>
+                  <td>{x.scenarioName}</td>
+                  <td>{x.time}</td>
+                  <td>{countVehicles(x.scenarioName)}</td>
+                  <td>
+                    <Icon
+                      name="add"
+                      theme="light"
+                      size="medium"
+                      onClick={() => navigate("/AddVehicle")}
+                    />
+                  </td>
+                  <td>
+                    <Icon
+                      name="edit"
+                      theme="light"
+                      size="medium"
+                      onClick={() => openModal(x.id)}
+                    ></Icon>
+                  </td>
+                  <td>
+                    <Icon
+                      name="delete"
+                      theme="light"
+                      size="medium"
+                      onClick={() => deleteVehicle(x.id)}
+                    />
+                  </td>
+                </tr>
+              );
+            })}
         </table>
+
+        <Modal isOpen={modalIsOpen} contentLabel="Example Modal" style={{
+            content: {
+              backgroundColor: 'black',
+              color:'white'
+            }}}
+            >
+          <div>
+            <EditScenario close={closeModal} />
+          </div>
+        </Modal>
       </div>
     );
 }

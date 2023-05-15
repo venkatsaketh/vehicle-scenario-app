@@ -1,18 +1,18 @@
 {
   "scenarios": [
     {
-      "scenarioName": "First",
-      "time": 77,
+      "scenarioName": "first2",
+      "time": 43,
       "id": 1
     },
     {
-      "scenarioName": "My Test",
-      "time": 77,
+      "scenarioName": "My Test1",
+      "time": 7,
       "id": 2
     },
     {
       "scenarioName": "Test Scenario",
-      "time": 77,
+      "time": 73,
       "id": 3
     }
   ],

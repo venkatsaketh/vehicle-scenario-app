@@ -58,8 +58,9 @@ function ViewScenario() {
         const msg = prompt("Enter 'Ok' if you want to delete");
         if(msg && msg.toLowerCase()==='ok')
         {
-             axios.delete(scenarioURL+`/${id}`);
-             getScenarios();
+             axios.delete(scenarioURL+`/${id}`)
+             .then(()=>getScenarios());
+             
        }
     }
 

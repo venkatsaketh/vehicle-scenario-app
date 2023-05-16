@@ -14,6 +14,7 @@ function AddVehicle() {
   { value: 'Downwards', label: 'Downwards' }
     ]
     const [scenarios,setScenarios] = useState([{ value: 'Towards', label: 'Towards' },]);
+    const selectInputRef = useRef();
 
     useEffect(()=>{
         axios.get('http://localhost:4000/scenarios')
@@ -51,7 +52,9 @@ function AddVehicle() {
         if(Object.keys(formRef.current.errors).length===0 && Object.keys(formRef.current.touched).length!==0) {
         //   console.log(formRef.current.values );
           axios.post('http://localhost:4000/vehicles', formRef.current.values)
-          .then(formRef.current?.resetForm())
+          .then(() => {
+            alert("Data Added")
+          })
         }
       }
      
@@ -80,6 +83,7 @@ function AddVehicle() {
         positionY:"",
         direction:"",
        }}
+       enableReinitialize
        validationSchema={VehicleSchema}
        onSubmit={values => {
          // same shape as initial values
@@ -91,8 +95,8 @@ function AddVehicle() {
             <div className='row-1'>
             <div className='inpt'>
             <label>Scenarios List</label>
-            <Select id="scenarios" type={"text"} options={scenarios}  styles={styles} onChange={option => setFieldValue("scenariosList", option.value)}/>
-           {errors.scenariosList && touched.scenariosList ? (<div className='err'>{errors.scenariosList}</div>) : null}
+            <Select ref={selectInputRef} id="scenarios" type={"text"} options={scenarios}  styles={styles} onChange={option => setFieldValue("scenariosList", option.value)}/>
+           {values.scenariosList==""? (<div className='err'>{errors.scenariosList}</div>) : null}
            </div>
            <div className='inpt'>
            <label>Vehicle Name</label>

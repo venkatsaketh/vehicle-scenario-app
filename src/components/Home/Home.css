@@ -1,0 +1,14 @@
+.Home-content {
+    margin: 50px;
+}
+
+.Scenario-list {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.row-2 {
+    display: flex;
+    justify-content: first !important;
+    column-gap: 293px;
+}

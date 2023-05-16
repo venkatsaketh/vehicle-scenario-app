@@ -37,9 +37,6 @@ function EditScenario(props) {
         }
       }
      
-      const reset = () => {
-        formRef.current?.resetForm();
-      }
 
 
     return (

@@ -1,7 +1,11 @@
+import './Home.css';
+import ViewVehicle from './ViewVehicle';
 
 function Home() {
     return (
-    <div>Home page</div>
+    <div className="Home-content">
+        <ViewVehicle/>
+    </div>
     );
 }
 

@@ -64,10 +64,23 @@ function ViewScenario() {
        }
     }
 
+     const deleteAll = () => {
+       if (window.confirm("Are you sure you what to delete all")) {
+         let urls = [];
+         for (let i = 0; i < scens.length; i++) {
+           urls.push(scenarioURL + `/${scens[i].id}`);
+         }
+         let deleteAllRequests = urls.map((url) => axios.delete(url));
+         axios.all(deleteAllRequests).then(()=>getScenarios());
+       }
+     };
+
     return (
       <div className="view-content">
+        <div className='header'>
         <h2>All Scenarios</h2>
-
+        <button onClick={deleteAll}>Delete All</button>
+        </div>
         <table>
           <tr className="Thead">
             <td>Scenario Id</td>
